@@ -24,18 +24,27 @@ namespace IndirimHesaplayici
                 {
                     if (chkIndirim5.Checked)
                         tutar -= tutar * 0.05;
+
                     if (chkIndirim10.Checked)
                         tutar -= tutar * 0.1;
+
                     if (chkIndirim15.Checked)
                         tutar -= tutar * 0.15;
                 }
                 MessageBox.Show("Tutar: " + tutar);
             }
-            catch (Exception ex)
+            catch (FormatException ex)
             {
 
-                MessageBox.Show("Hata: " + ex.Message);
+                MessageBox.Show("Lütfen harf, özel karakterler kullanmayýnýz.");
+                
+                
             }
+            catch (Exception exx)
+            {
+                MessageBox.Show("Hata: " + exx.Message);
+            }
+            
         }
     }
 }
