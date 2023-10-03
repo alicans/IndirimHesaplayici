@@ -37,14 +37,14 @@ namespace IndirimHesaplayici
             {
 
                 MessageBox.Show("Lütfen harf, özel karakterler kullanmayýnýz.");
-                
-                
+
+
             }
             catch (Exception exx)
             {
                 MessageBox.Show("Hata: " + exx.Message);
             }
-            
+
         }
     }
 }
